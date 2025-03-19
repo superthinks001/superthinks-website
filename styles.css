@@ -324,17 +324,18 @@ nav {
     width: 100%;
 }
 
-/* Form Content Box - Aligned to the Right */
+/* Form Content Box - Expand Width to the Left */
 .form-content {
-    max-width: 900px;
-    background: rgba(255, 255, 255, 0.85); /* Reduced opacity */
-    padding: 80px; /* Ensures margin aligns with elements */
-    margin-left: auto; /* Pushes box to the right */
-    margin-right: 80px; /* Matches the left margin it previously had */
-    height: 100vh; /* Ensures the white box stretches to full section */
+    width: 65vw; /* Increased width */
+    max-width: 1100px; /* Increased max-width */
+    background: rgba(255, 255, 255, 0.85); /* Maintains translucency */
+    padding: 80px;
+    margin-left: 5vw; /* Moves left edge further left */
+    margin-right: 80px; /* Keeps right edge fixed */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content within the box */
+    justify-content: center;
     text-align: left;
 }
 
