@@ -177,11 +177,11 @@
     <script>
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevents default form submission
-    
+
         let form = event.target;
         let formData = new FormData(form);
-    
-        fetch("https://script.google.com/macros/s/AKfycbyx9Khx-0UTTW3zUYu8qMeeVVsYClZTM-6f8l7WuaTl0pMCj5hu25KY9WVgP1uxDMJp/exec", { 
+
+        fetch("https://script.google.com/macros/s/AKfycbyx9Khx-0UTTW3zUYu8qMeeVVsYClZTM-6f8l7WuaTl0pMCj5hu25KY9WVgP1uxDMJp/exec", {
             method: "POST",
             body: formData
         })
