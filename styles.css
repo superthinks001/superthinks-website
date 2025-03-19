@@ -327,7 +327,7 @@ nav {
 /* Form Content Box - Expand Width to the Left While Keeping Right Edge Fixed */
 .form-content {
     width: 65vw; /* Increased width */
-    max-width: 1100px; /* Ensures max expansion */
+    max-width: 900px; /* Ensures max expansion */
     background: rgba(255, 255, 255, 0.85); /* Maintains translucency */
     padding: 80px;
     margin-left: auto; /* Ensures it expands leftward */
