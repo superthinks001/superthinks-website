@@ -162,34 +162,42 @@
             </form>
 
             <!-- Success Message (Hidden Initially) -->
-            <div id="success-message" style="display: none; text-align: center; padding: 20px; color: #3C2A4D;">
-                <h3>Thank you!</h3>
-                <p>Your message has been sent successfully. We will be in touch soon!</p>
+            <div id="success-message" style="display: none;">
+                <p>Thank you! Your message has been sent successfully.</p>
+            </div>
+    
+            <!-- Error Message (Hidden Initially) -->
+            <div id="error-message" style="display: none; color: red;">
+                <p>Oops! Something went wrong. Please try again later.</p>
             </div>
         </div>
     </section>
 
-    <!-- JavaScript for Form Submission (Paste Before </body>) -->
+    <!-- JavaScript for Form Submission -->
     <script>
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevents default form submission
-
+    
         let form = event.target;
         let formData = new FormData(form);
-
+    
         fetch("https://script.google.com/macros/s/AKfycbw1oO9dpPM4owJNQNkcTjBNERc1UGqOzXSF_RnpQkKnD5f8kyMEhZKfRvJJ7oLFpYVS/exec", {
             method: "POST",
             body: formData
-        }).then(response => {
-            if (response.ok) {
-                form.style.display = "none"; // Hide the form
-                document.getElementById("success-message").style.display = "block"; // Show success message
+        })
+        .then(response => response.json()) // Expecting JSON response
+        .then(data => {
+            if (data.result === "success") {
+                form.reset(); // Clears form fields
+                form.style.display = "none"; // Hides the form
+                document.getElementById("success-message").style.display = "block"; // Shows success message
             } else {
-                alert("Something went wrong. Please try again.");
+                document.getElementById("error-message").style.display = "block"; // Shows error message
             }
-        }).catch(error => {
+        })
+        .catch(error => {
             console.error("Error:", error);
-            alert("Something went wrong. Please try again.");
+            document.getElementById("error-message").style.display = "block"; // Shows error message
         });
     });
     </script>
