@@ -316,7 +316,7 @@ nav {
 .contact {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Aligns content to the left */
+    justify-content: space-between; /* Space between left and right content */
     padding: 0; /* No padding to allow full-width */
     background: url('./assets/contacts_background.png') no-repeat center center;
     background-size: cover;
@@ -324,14 +324,50 @@ nav {
     width: 100%;
 }
 
-/* Form Content Box - Expand Width to the Left While Keeping Right Edge Fixed */
+/* Left Content - Contact Info */
+.contact-info {
+    flex: 1;
+    color: white;
+    text-align: left;
+    padding-left: 80px; /* Ensures left alignment with other sections */
+    max-width: 40%; /* Prevents text from stretching too far */
+}
+
+.contact-info h2 {
+    font-size: 42px;
+    font-family: 'Marcellus', serif;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Styling for "Hire | Partner | Join" */
+.contact-info strong {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-weight: normal;
+    display: block;
+    margin-top: 15px;
+}
+
+/* LinkedIn Icon */
+.linkedin-icon img {
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+}
+
+/* Right Content - Form Box */
 .form-content {
-    width: 40vw; /* Increased width */
-    max-width: 900px; /* Ensures max expansion */
-    background: rgba(255, 255, 255, 0.85); /* Maintains translucency */
+    width: min(800px, 40vw); /* Limits width to max 900px, but scales */
+    background: rgba(255, 255, 255, 0.85);
     padding: 80px;
-    margin-left: auto; /* Ensures it expands leftward */
-    margin-right: 80px; /* Keeps right edge fixed */
+    margin-left: auto;
+    margin-right: 80px;
     height: 100vh;
     display: flex;
     flex-direction: column;
