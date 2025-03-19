@@ -27,7 +27,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px; /* Increased left & right margin */
+    padding: 20px 80px; /* Ensures uniform margin */
     background: transparent;
 }
 
@@ -111,4 +111,56 @@ nav {
 .hero p {
     font-size: 18px;
     margin-top: 25px; /* Increased space between heading & paragraph */
+}
+
+/* Services Section */
+.services {
+    height: 100vh;
+    padding: 60px 80px; /* SAME AS HERO SECTION */
+    text-align: center;
+    background: url('./assets/services_background.png') no-repeat center center/cover;
+}
+
+/* Section Title */
+.services h2 {
+    font-size: 32px;
+    font-family: 'Marcellus', serif;
+    color: black;
+    margin-bottom: 40px;
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 80px; /* SAME LEFT & RIGHT MARGINS AS OTHER SECTIONS */
+}
+
+/* Individual Service Box */
+.service {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Service Images */
+.service img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Service Titles */
+.service h3 {
+    font-size: 20px;
+    font-family: 'Marcellus', serif;
+    margin-top: 15px;
+}
+
+/* Service Descriptions */
+.service p {
+    font-size: 14px;
+    margin-top: 5px;
 }
