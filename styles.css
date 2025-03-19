@@ -315,28 +315,10 @@ nav {
 /* Contact Section */
 .contact {
     display: flex;
-    width: 100%;
-    min-height: 100vh; /* Full viewport height */
-    position: relative;
-}
-
-/* Left Side (Dark Background) */
-.contact-left {
-    flex: 1;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+    padding: 0; /* No padding to allow full-width */
     background: url('./assets/contacts_background.png') no-repeat center center;
     background-size: cover;
-}
-
-/* Right Side (Light Translucent Background) */
-.contact-right {
-    position: absolute;
-    right: 80px; /* Ensures the box is 80px away from the right */
-    top: 0;
-    bottom: 0;
-    width: 600px; /* Fixed width */
-    background: rgba(255, 255, 255, 0.85); /* Match Story section opacity */
-    display: flex;
-    align-items: center;
-    padding-left: 60px; /* Adjust this as needed for content alignment */
-    padding-right: 60px;
+    min-height: 100vh; /* Full viewport height */
 }
