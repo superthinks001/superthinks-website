@@ -115,8 +115,8 @@ nav {
 
 /* Services Section */
 .services {
-    padding: 120px 80px 100px; /* More top padding for title spacing */
-    text-align: center;
+    padding: 80px 80px; /* Reduced top padding */
+    text-align: left; /* Aligns all text to the left */
     background: url('./assets/services_background.png') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -126,47 +126,46 @@ nav {
 
 /* Section Title */
 .services h2 {
-    font-size: 34px; /* Slightly larger */
+    font-size: 32px;
     font-family: 'Marcellus', serif;
     color: black;
-    margin-bottom: 50px; /* More spacing */
+    margin-bottom: 30px; /* Reduced spacing */
 }
 
 /* Services Container */
 .services-container {
     display: flex;
-    justify-content: center;
-    gap: 30px; /* Reduced gap */
-    max-width: 1100px;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
     width: 100%;
 }
 
 /* Individual Service Box */
 .service {
     width: 30%;
-    background: rgba(255, 255, 255, 0.9); /* Reduced opacity */
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    background: transparent; /* Removed white box */
+    padding: 0px; /* Removed padding */
+    text-align: left; /* Aligns text left */
 }
 
 /* Service Images */
 .service img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Creates equal spacing */
 }
 
 /* Service Titles */
 .service h3 {
-    font-size: 22px; /* Slightly larger */
+    font-size: 22px;
     font-family: 'Marcellus', serif;
-    margin-top: 15px;
+    margin-bottom: 10px; /* Creates equal spacing */
 }
 
 /* Service Descriptions */
 .service p {
-    font-size: 16px; /* More readable */
-    margin-top: 6px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Same spacing as title */
     line-height: 1.4;
 }
