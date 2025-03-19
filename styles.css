@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'HelveticaNeueLight', sans-serif;
+    font-weight: normal; /* Ensures no bold text */
 }
 
 /* Navigation Bar */
@@ -26,33 +27,45 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 60px;
     background: transparent;
 }
 
-/* Logo */
-.logo img {
-    height: 40px;
+/* Logo (Increased Size & Added Text) */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Nav Links */
+.logo img {
+    height: 60px; /* Increased logo size by 50% */
+}
+
+.logo-text {
+    font-size: 22px;
+    color: white;
+    font-family: 'HelveticaNeueLight', sans-serif; /* Changed to HelveticaNeueLight */
+}
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 35px; /* Increased spacing between buttons */
 }
 
 .nav-links li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* Right Side of Navbar */
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 30px; /* Increased spacing between LinkedIn and button */
 }
 
 /* LinkedIn Icon */
@@ -64,10 +77,11 @@ nav {
 /* Call-to-Action Button */
 .cta-button {
     border: 1px solid white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 /* Hero Section */
@@ -88,11 +102,10 @@ nav {
 
 .hero h1 {
     font-size: 48px;
-    font-weight: bold;
     font-family: 'Marcellus', serif;
 }
 
 .hero p {
     font-size: 18px;
-    margin-top: 15px;
+    margin-top: 25px; /* Increased space between heading & paragraph */
 }
