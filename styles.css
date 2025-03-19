@@ -310,3 +310,134 @@ nav {
     font-family: 'HelveticaNeueLight', sans-serif;
     margin-top: 5px;
 }
+
+/* Contact Section */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 80px;
+    background: url('./assets/contact_background.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+    flex: 1;
+    color: white;
+    text-align: left;
+    padding-right: 50px;
+}
+
+.contact-info h2 {
+    font-size: 42px;
+    font-family: 'Marcellus', serif;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Style for Hire | Partner | Join */
+.contact-info strong {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* LinkedIn Icon */
+.contact-info a img {
+    width: 36px;
+    height: 36px;
+}
+
+/* Right Side: Form */
+.contact-form {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Fields */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    flex: 1;
+}
+
+/* Input Styles */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+}
+
+/* Textarea Styling */
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Form Buttons */
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Send Button */
+.send-button {
+    background: #3C2A4D;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Book a Call Button */
+.call-button {
+    background: #3C2A4D;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Button Hover Effects */
+.send-button:hover,
+.call-button:hover {
+    background: #2B1C38;
+}
