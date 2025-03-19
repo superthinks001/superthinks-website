@@ -270,7 +270,7 @@ nav {
 }
 
 /* Circular Images */
-.team-member img {
+.team-member img.profile-pic {
     width: 180px;
     height: 180px;
     border-radius: 50%; /* Makes it circular */
@@ -282,15 +282,22 @@ nav {
 /* LinkedIn Icon */
 .team-member .linkedin-icon {
     position: absolute;
-    bottom: 5px;
-    right: 25px;
-    width: 24px;
-    height: 24px;
+    bottom: 10px;
+    right: 15px;
+    background: white;
+    padding: 4px;
+    border-radius: 0px; /* Ensures square icon with slight rounding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Ensuring LinkedIn Icon is not cropped */
 .team-member .linkedin-icon img {
-    width: 100%;
-    height: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 0; /* Removes inherited circular cropping */
+    object-fit: contain;
 }
 
 /* Team Member Name */
