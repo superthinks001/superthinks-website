@@ -158,14 +158,15 @@ nav {
 
 /* Service Titles */
 .service h3 {
-    font-size: 22px;
+    font-size: 24px;
     font-family: 'Marcellus', serif;
     margin-bottom: 10px; /* Creates equal spacing */
+    color: #3C2A4D; /* Added line to make the font color Dark purple */
 }
 
 /* Service Descriptions */
 .service p {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 10px; /* Same spacing as title */
     line-height: 1.4;
 }
