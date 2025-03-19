@@ -326,7 +326,7 @@ nav {
 
 /* Form Content Box - Aligned to the Right */
 .form-content {
-    max-width: 700px;
+    max-width: 800px;
     background: rgba(255, 255, 255, 0.85); /* Reduced opacity */
     padding: 80px; /* Ensures margin aligns with elements */
     margin-left: auto; /* Pushes box to the right */
