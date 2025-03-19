@@ -317,6 +317,7 @@ nav {
     display: flex;
     width: 100%;
     min-height: 100vh; /* Full viewport height */
+    position: relative;
 }
 
 /* Left Side (Dark Background) */
@@ -328,11 +329,14 @@ nav {
 
 /* Right Side (Light Translucent Background) */
 .contact-right {
-    flex: 1;
+    position: absolute;
+    right: 80px; /* Ensures the box is 80px away from the right */
+    top: 0;
+    bottom: 0;
+    width: 600px; /* Fixed width */
     background: rgba(255, 255, 255, 0.85); /* Match Story section opacity */
     display: flex;
-    justify-content: flex-start; /* Align content from left */
     align-items: center;
-    padding-right: 160px; /* Adds uniformity */
-    width: 400px; /* Limits the size of the box */
+    padding-left: 60px; /* Adjust this as needed for content alignment */
+    padding-right: 60px;
 }
