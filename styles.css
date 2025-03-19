@@ -414,3 +414,14 @@ form textarea {
     background: #2B1C38;
 }
 
+/* Success Message Styling */
+#success-message {
+    display: none; /* Initially hidden */
+    text-align: center;
+    padding: 20px;
+    color: #3C2A4D; /* Matching the button color */
+    font-size: 16px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
