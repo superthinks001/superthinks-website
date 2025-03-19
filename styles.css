@@ -1,102 +1,98 @@
-/* ✅ Import Fonts */
+/* Import Fonts */
 @font-face {
     font-family: 'Marcellus';
     src: url('assets/fonts/Marcellus-Regular.ttf') format('truetype');
 }
 
-/* ✅ Reset */
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('assets/fonts/HelveticaNeue_Light.ttf') format('truetype');
+}
+
+/* Reset Defaults */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'HelveticaNeueLight', sans-serif;
 }
 
-/* ✅ Ensure Full Page Height */
-html, body {
-    height: 100%;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #f5f5f5;
-}
-
-/* ✅ Navigation Bar Styling */
-.navbar {
-    position: fixed; /* Keeps navbar on top */
+/* Navigation Bar */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;  
-    color: white;
-    z-index: 1000;
-    background: black; /* No transparency */
+    padding: 20px 50px;
+    background: transparent;
 }
 
-/* ✅ Fix Logo Size */
-.navbar .logo {
-    display: flex;
-    align-items: center;
+/* Logo */
+.logo img {
+    height: 40px;
 }
 
-.navbar .logo img {
-    height: 45px; /* ✅ Adjusted to match wireframe */
-    margin-right: 12px;
-}
-
-/* ✅ Navigation Links */
+/* Nav Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
-.nav-links a {
-    color: white;
+.nav-links li a {
     text-decoration: none;
-    font-size: 18px;
-}
-
-/* ✅ LinkedIn Icon */
-.nav-links img {
-    max-width: 24px;
-    height: auto;
-}
-
-/* ✅ Book A Call Button */
-.nav-links .btn {
-    border: 2px solid white;
-    padding: 8px 20px;
-    border-radius: 5px;
+    color: white;
     font-size: 16px;
 }
 
-/* ✅ Hero Section - No Overlay, No Parallax */
-.hero {
+/* Right Side of Navbar */
+.nav-right {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    padding-top: 80px; /* ✅ Ensures content does not hide under navbar */
-    background: url('assets/background.jpg') no-repeat center center/cover;
+    gap: 15px;
 }
 
-/* ✅ Hero Content */
+/* LinkedIn Icon */
+.linkedin-icon img {
+    height: 24px;
+    width: 24px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    border: 1px solid white;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('assets/hero_background.png') no-repeat center center/cover;
+}
+
+/* Hero Content */
 .hero-content {
     color: white;
-    max-width: 850px;
-    padding: 20px;
+    max-width: 800px;
 }
 
 .hero h1 {
-    font-family: 'Marcellus', serif;
-    font-size: 52px;
+    font-size: 48px;
     font-weight: bold;
-    line-height: 1.2;
+    font-family: 'Marcellus', serif;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 15px;
-    line-height: 1.5;
-    font-weight: 300;
 }
