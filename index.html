@@ -162,13 +162,13 @@
             </form>
 
             <!-- Success Message (Hidden Initially) -->
-            <div id="success-message" style="display: none;">
-                <p>Thank you! Your message has been sent successfully.</p>
+            <div id="success-message" style="display: none; text-align: center; padding: 20px; color: #3C2A4D;">
+                <p>Thank you! Your message has been sent successfully. We will be in touch soon.</p>
             </div>
     
             <!-- Error Message (Hidden Initially) -->
-            <div id="error-message" style="display: none; color: red;">
-                <p>Oops! Something went wrong. Please try again later.</p>
+            <div id="error-message" style="display: none; text-align: center; padding: 20px; color: red;">
+                <p>Sorry, something went wrong! Please try again later or email us directly at: contact@superthinks.ai .</p>
             </div>
         </div>
     </section>
@@ -185,19 +185,19 @@
             method: "POST",
             body: formData
         })
-        .then(response => response.json()) // Expecting JSON response
+        .then(response => response.json()) // Expect JSON response
         .then(data => {
-            if (data.result === "success") {
-                form.reset(); // Clears form fields
-                form.style.display = "none"; // Hides the form
-                document.getElementById("success-message").style.display = "block"; // Shows success message
+            if (data.status === "success") {
+                form.reset(); // Clear form fields
+                form.style.display = "none"; // Hide the form
+                document.getElementById("success-message").style.display = "block"; // Show success message
             } else {
-                document.getElementById("error-message").style.display = "block"; // Shows error message
+                document.getElementById("error-message").style.display = "block"; // Show error message
             }
         })
         .catch(error => {
             console.error("Error:", error);
-            document.getElementById("error-message").style.display = "block"; // Shows error message
+            document.getElementById("error-message").style.display = "block"; // Show error message
         });
     });
     </script>
