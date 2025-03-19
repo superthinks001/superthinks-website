@@ -169,3 +169,62 @@ nav {
     margin-bottom: 10px; /* Same spacing as title */
     line-height: 1.4;
 }
+
+/* Import Bold Font */
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('assets/fonts/HelveticaNeue_Bold.ttf') format('truetype');
+}
+
+/* Story Section */
+.story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 80px;
+    background: url('./assets/story_background.png') no-repeat center center;
+    background-size: cover;
+    text-align: left;
+}
+
+/* Content Alignment */
+.story-content {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Section Title */
+.story h2 {
+    font-size: 32px;
+    font-family: 'Marcellus', serif;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+.story p {
+    font-size: 16px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Bold Headers */
+.bold-text {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-weight: normal; /* Ensures it picks the font file instead of browser defaults */
+}
+
+/* Button Styling */
+.story-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #3C2A4D; /* Dark purple */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
