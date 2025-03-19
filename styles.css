@@ -115,58 +115,58 @@ nav {
 
 /* Services Section */
 .services {
-    height: 100vh;
-    padding: 60px 80px; /* SAME AS HERO SECTION */
+    padding: 120px 80px 100px; /* More top padding for title spacing */
     text-align: center;
-    background: url('./assets/services_background.png') no-repeat center center/cover;
+    background: url('./assets/services_background.png') no-repeat center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 /* Section Title */
 .services h2 {
-    font-size: 32px;
+    font-size: 34px; /* Slightly larger */
     font-family: 'Marcellus', serif;
     color: black;
-    margin-bottom: 40px;
+    margin-bottom: 50px; /* More spacing */
 }
 
-/* Services Container - Ensures Three Columns */
+/* Services Container */
 .services-container {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 0 80px; /* SAME LEFT & RIGHT MARGINS AS OTHER SECTIONS */
-    max-width: 1100px; /* Restricts width to maintain structure */
+    justify-content: center;
+    gap: 30px; /* Reduced gap */
+    max-width: 1100px;
     width: 100%;
 }
 
 /* Individual Service Box */
 .service {
-    width: 30%; /* Each service takes 30% of the container */
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
+    width: 30%;
+    background: rgba(255, 255, 255, 0.9); /* Reduced opacity */
+    padding: 25px;
+    border-radius: 12px;
     text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 /* Service Images */
 .service img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 /* Service Titles */
 .service h3 {
-    font-size: 20px;
+    font-size: 22px; /* Slightly larger */
     font-family: 'Marcellus', serif;
     margin-top: 15px;
 }
 
 /* Service Descriptions */
 .service p {
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 16px; /* More readable */
+    margin-top: 6px;
+    line-height: 1.4;
 }
