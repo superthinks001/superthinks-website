@@ -324,12 +324,13 @@ nav {
     width: 100%;
 }
 
-/* Form Content Box */
+/* Form Content Box - Aligned to the Right */
 .form-content {
-    max-width: 600px;
+    max-width: 700px;
     background: rgba(255, 255, 255, 0.85); /* Reduced opacity */
-    padding: 80px; /* Ensures margin aligns with logo’s left edge */
-    margin-left: 80px; /* Matches left margin of logo */
+    padding: 80px; /* Ensures margin aligns with elements */
+    margin-left: auto; /* Pushes box to the right */
+    margin-right: 80px; /* Matches the left margin it previously had */
     height: 100vh; /* Ensures the white box stretches to full section */
     display: flex;
     flex-direction: column;
