@@ -316,128 +316,127 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 80px;
+    padding: 0;
     background: url('./assets/contact_background.png') no-repeat center center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100vh; /* Full viewport height */
 }
 
-/* Contact Container */
-.contact-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Left Side: Contact Info */
-.contact-info {
-    flex: 1;
-    color: white;
+/* Contact Content Box (Left Side) */
+.contact-content {
+    max-width: 600px;
+    padding-left: 80px; /* Matches left margin of Story section */
     text-align: left;
-    padding-right: 50px;
+    color: white;
 }
 
-.contact-info h2 {
-    font-size: 42px;
+/* Section Title */
+.contact h2 {
+    font-size: 48px;
     font-family: 'Marcellus', serif;
-    margin-bottom: 15px;
+    color: white;
+    margin-bottom: 10px;
 }
 
-.contact-info p {
+/* Contact Paragraph */
+.contact p {
     font-size: 16px;
     font-family: 'HelveticaNeueLight', sans-serif;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* Style for Hire | Partner | Join */
-.contact-info strong {
-    font-family: 'HelveticaNeueBold', sans-serif;
-    font-weight: normal;
+/* Force Paragraph Breaks */
+.contact p span.break {
     display: block;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-/* LinkedIn Icon */
-.contact-info a img {
-    width: 36px;
-    height: 36px;
-}
-
-/* Right Side: Form */
-.contact-form {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Form Fields */
-.contact-form form {
+/* Translucent Background for Form (Right Side) */
+.contact-form-container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.85); /* Same as Story section */
+    padding: 80px;
+    margin-right: 80px; /* Ensures equal right margin */
+    height: 100vh; /* Full height */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    border-radius: 0; /* No rounded edges */
 }
 
-.name-fields {
+/* Contact Form */
+.contact-form {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.name-fields input {
-    flex: 1;
-}
-
-/* Input Styles */
+/* Input Fields */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    font-size: 12px; /* Text inside fields */
+    border: none;
+    background: rgba(240, 240, 240, 0.2); /* Lightest gray */
+    outline: none;
+}
+
+/* Input Labels */
+.contact-form label {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Form Row for First Name & Last Name */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-row input {
+    width: 48%;
+}
+
+/* Buttons */
+.contact-form button {
+    background: #3C2A4D; /* Same as Story section */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
-    font-family: 'HelveticaNeueLight', sans-serif;
+    font-size: 14px; /* Ensures same text size */
+    border: none;
+    cursor: pointer;
+    width: fit-content; /* Auto size based on text */
+    white-space: nowrap; /* Prevent text wrapping */
+    transition: background 0.3s ease-in-out;
 }
 
-/* Textarea Styling */
-.contact-form textarea {
-    height: 120px;
-    resize: none;
-}
-
-/* Form Buttons */
-.contact-buttons {
+/* Buttons Row */
+.button-row {
     display: flex;
     gap: 20px;
 }
 
-/* Send Button */
-.send-button {
-    background: #3C2A4D;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Hover Effects */
+.contact-form button:hover {
+    background: #2B1C38; /* Darker shade for hover effect */
 }
 
-/* Book a Call Button */
-.call-button {
-    background: #3C2A4D;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    text-align: center;
+/* LinkedIn Icon */
+.contact-linkedin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-/* Button Hover Effects */
-.send-button:hover,
-.call-button:hover {
-    background: #2B1C38;
+.contact-linkedin img {
+    width: 24px;
+    height: 24px;
 }
