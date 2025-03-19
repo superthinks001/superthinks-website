@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Email Content
-    $to = "your_email@example.com"; // 🔹 Change this to your actual email
+    $to = "superthinksai@gmail.com"; // 🔹 UPDATE Email ID here
     $subject = "New Contact Form Submission from $first_name $last_name";
     $email_body = "You have received a new message from your contact form.\n\n";
     $email_body .= "Name: $first_name $last_name\n";
