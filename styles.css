@@ -321,4 +321,5 @@ nav {
     background: url('./assets/contacts_background.png') no-repeat center center;
     background-size: cover;
     min-height: 100vh; /* Full viewport height */
+    width: 100%;
 }
