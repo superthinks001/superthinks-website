@@ -180,19 +180,25 @@ nav {
 .story {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 100px 80px;
+    justify-content: flex-start; /* Aligns content to the left */
+    padding: 0; /* No padding to allow full-width */
     background: url('./assets/story_background.png') no-repeat center center;
     background-size: cover;
-    text-align: left;
+    min-height: 100vh; /* Full viewport height */
 }
 
-/* Content Alignment */
+/* Story Content Box */
 .story-content {
     max-width: 600px;
-    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
-    padding: 40px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Reduced opacity */
+    padding: 80px; /* Ensures margin aligns with logo’s left edge */
+    margin-left: 80px; /* Matches left margin of logo */
+    height: 100vh; /* Ensures the white box stretches to full section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content within the box */
+    text-align: left;
+    border-radius: 0; /* Removed rounded corners */
 }
 
 /* Section Title */
@@ -214,7 +220,7 @@ nav {
 /* Bold Headers */
 .bold-text {
     font-family: 'HelveticaNeueBold', sans-serif;
-    font-weight: normal; /* Ensures it picks the font file instead of browser defaults */
+    font-weight: normal;
 }
 
 /* Button Styling */
@@ -225,6 +231,6 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
     margin-top: 20px;
+    border-radius: 5px;
 }
