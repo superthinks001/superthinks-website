@@ -27,32 +27,35 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 20px 80px; /* Increased left & right margin */
     background: transparent;
 }
 
-/* Logo (Increased Size & Added Text) */
+/* Logo Section */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo img {
-    height: 60px; /* Increased logo size by 50% */
+    height: 90px; /* Logo size remains */
 }
 
 .logo-text {
-    font-size: 22px;
-    color: white;
-    font-family: 'HelveticaNeueLight', sans-serif; /* Changed to HelveticaNeueLight */
+    font-size: 24px; /* Increased size */
+    color: white; /* Fixed color */
+    font-family: 'HelveticaNeueLight', sans-serif;
+    display: flex;
+    align-items: center; /* Aligns with logo */
 }
 
 /* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 35px; /* Increased spacing between buttons */
+    gap: 50px; /* Increased spacing */
+    justify-content: center;
 }
 
 .nav-links li a {
@@ -61,11 +64,11 @@ nav {
     font-size: 18px;
 }
 
-/* Right Side of Navbar */
+/* Right Side (LinkedIn Icon + Button) */
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 30px; /* Increased spacing between LinkedIn and button */
+    gap: 30px; /* Increased spacing */
 }
 
 /* LinkedIn Icon */
