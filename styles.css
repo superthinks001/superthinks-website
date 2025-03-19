@@ -151,7 +151,7 @@ nav {
 
 /* Service Images */
 .service img {
-    width: 100%;
+    width: 85%;
     border-radius: 10px;
     margin-bottom: 20px; /* Creates equal spacing */
 }
@@ -165,7 +165,7 @@ nav {
 
 /* Service Descriptions */
 .service p {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px; /* Same spacing as title */
     line-height: 1.4;
 }
