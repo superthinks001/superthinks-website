@@ -313,19 +313,7 @@ nav {
 
 /* Contact Section */
 .contact {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0;
+    min-height: 100vh; /* Full viewport height */
     background: url('./assets/contact_background.png') no-repeat center center;
     background-size: cover;
-    min-height: 100vh; /* Full viewport height */
-}
-
-/* Contact Content Box (Left Side) */
-.contact-content {
-    max-width: 600px;
-    padding-left: 80px; /* Matches left margin of Story section */
-    text-align: left;
-    color: white;
 }
