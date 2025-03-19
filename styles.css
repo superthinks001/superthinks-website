@@ -4,170 +4,114 @@
     src: url('assets/fonts/Marcellus-Regular.ttf') format('truetype');
 }
 
-/* Default Font Setup */
-body {
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure Full Page Height */
+html, body {
+    height: 100%;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #f5f5f5;
 }
 
-/* Navigation */
+/* ✅ Navigation Bar Styling */
 .navbar {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    width: 100%;
-    top: 0;
+    padding: 30px 80px;  /* Increased padding to match wireframe */
+    color: white;
     z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 55px; /* Ensuring logo is same size as wireframe */
+    margin-right: 12px;
+}
+
+.navbar .brand-name {
+    font-size: 24px; /* Exact font size as per wireframe */
+    font-weight: 600;
+    font-family: 'Marcellus', serif;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Spacing between navigation links */
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px; /* Making sure it matches wireframe */
+    font-weight: 400;
 }
 
+/* ✅ LinkedIn Icon */
 .nav-links img {
-    max-width: 24px; /* FIX: Restrict LinkedIn icon size */
+    max-width: 30px; /* Ensuring icon is correctly sized */
     height: auto;
 }
 
-/* Hero Section with Parallax */
-.hero {
-    background: url('assets/background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    background-attachment: fixed; /* FIX: Ensure Parallax Effect Works */
-}
-
-/* FIX: Make overlay lighter for better readability */
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Changed from 0.5 to 0.3 */
-}
-
-/* FIX: Ensure Hero Section Text is Readable */
-.hero h1 {
-    font-family: 'Marcellus', serif;
-    font-size: 3rem;
-    z-index: 10;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin-top: 10px;
-    z-index: 10;
-}
-
-/* Services Section */
-.services {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.service-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.service img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Team Section */
-.team {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-content: center;
-}
-
-.team-member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Contact Form */
-.contact {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-.contact input, 
-.contact textarea {
-    width: 80%;
-    max-width: 500px;
-    padding: 10px;
-    border: 1px solid #ccc;
+/* ✅ Book A Call Button */
+.nav-links .btn {
+    border: 2px solid white;
+    padding: 8px 20px;
     border-radius: 5px;
     font-size: 16px;
 }
 
-.contact button {
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background: #333;
-}
-
-/* Footer */
-footer {
+/* ✅ Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px;
-    background: black;
-    color: white;
-    margin-top: 40px;
+    height: 100vh;
+    background: url('assets/background.jpg') no-repeat center center/cover;
+    position: relative;
 }
 
-footer a {
+/* ✅ Overlay for Readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* Adjusted opacity */
+}
+
+/* ✅ Hero Content */
+.hero-content {
+    position: relative;
     color: white;
-    text-decoration: none;
+    z-index: 10;
+    max-width: 850px;  /* Ensuring correct width */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: 'Marcellus', serif;
+    font-size: 52px; /* Ensuring exact font size */
     font-weight: bold;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 20px; /* Matching wireframe */
+    margin-top: 15px;
+    line-height: 1.5;
+    font-weight: 300;
 }
