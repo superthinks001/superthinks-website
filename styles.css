@@ -236,3 +236,73 @@ nav {
     width: fit-content; /* Ensures button width matches text */
     white-space: nowrap; /* Prevents text from wrapping */
 }
+
+/* Team Section */
+.team {
+    padding: 80px 80px; /* Same margins as other sections */
+    text-align: center;
+    background: url('./assets/team_background.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* Section Title */
+.team h2 {
+    font-size: 32px;
+    font-family: 'Marcellus', serif;
+    color: black;
+    margin-bottom: 40px; /* Spacing before team members */
+}
+
+/* Team Container */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px; /* Spacing between team members */
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Team Member */
+.team-member {
+    position: relative;
+    text-align: center;
+}
+
+/* Circular Images */
+.team-member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* LinkedIn Icon */
+.team-member .linkedin-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    width: 24px;
+    height: 24px;
+}
+
+.team-member .linkedin-icon img {
+    width: 100%;
+    height: auto;
+}
+
+/* Team Member Name */
+.team-member h3 {
+    font-size: 18px;
+    font-family: 'Marcellus', serif;
+    margin-top: 15px;
+}
+
+/* Role Text */
+.team-member p {
+    font-size: 14px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    margin-top: 5px;
+}
