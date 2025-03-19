@@ -343,22 +343,22 @@ nav {
     font-size: 16px;
     font-family: 'HelveticaNeueLight', sans-serif;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* Styling for "Hire | Partner | Join" */
+/* Styling for "Connect with SuperThinks on Linkedin" */
 .contact-info strong {
     font-family: 'HelveticaNeueBold', sans-serif;
     font-weight: normal;
     display: block;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 /* LinkedIn Icon */
 .linkedin-icon img {
     width: 24px;
     height: 24px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 /* Right Content - Form Box */
@@ -384,7 +384,7 @@ form {
 
 /* Labels */
 form label {
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'HelveticaNeueLight', sans-serif;
     font-weight: normal;
     text-transform: none; /* Removed Upper Case */
@@ -394,10 +394,10 @@ form label {
 form input,
 form textarea {
     width: 100%;
-    padding: 8px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'HelveticaNeueLight', sans-serif;
     background: transparent; /* Transparent background */
 }
