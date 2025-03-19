@@ -313,7 +313,25 @@ nav {
 
 /* Contact Section */
 .contact {
+    display: flex;
+    width: 100%;
     min-height: 100vh; /* Full viewport height */
+}
+
+/* Left Side (Dark Background) */
+.contact-left {
+    flex: 1;
     background: url('./assets/contact_background.png') no-repeat center center;
     background-size: cover;
+}
+
+/* Right Side (Light Translucent Background) */
+.contact-right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.85); /* Match Story section opacity */
+    display: flex;
+    justify-content: flex-start; /* Align content from left */
+    align-items: center;
+    padding-left: 80px; /* Match the margin from the left of Story section */
+    padding-right: 80px; /* Adds uniformity */
 }
