@@ -337,3 +337,79 @@ nav {
     justify-content: center; /* Centers content within the box */
     text-align: left;
 }
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+form label {
+    font-size: 10px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* Input Fields */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    background: rgba(255, 255, 255, 0.6); /* Lightest gray or transparent */
+}
+
+/* Textarea */
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Send Button */
+.send-button {
+    background: #3C2A4D;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+    width: fit-content; /* Ensures button width matches text */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Book a Call Button */
+.call-button {
+    background: #3C2A4D;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+/* Hover Effects */
+.send-button:hover,
+.call-button:hover {
+    background: #2B1C38;
+}
