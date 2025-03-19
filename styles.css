@@ -4,7 +4,7 @@
     src: url('assets/fonts/Marcellus-Regular.ttf') format('truetype');
 }
 
-/* Use Helvetica Neue if available, otherwise default to Helvetica or Arial */
+/* Default Font Setup */
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
     top: 0;
@@ -37,6 +37,11 @@ body {
     font-weight: bold;
 }
 
+.nav-links img {
+    max-width: 24px; /* FIX: Restrict LinkedIn icon size */
+    height: auto;
+}
+
 /* Hero Section with Parallax */
 .hero {
     background: url('assets/background.jpg') no-repeat center center/cover;
@@ -47,15 +52,29 @@ body {
     text-align: center;
     color: white;
     position: relative;
-    overflow: hidden;
+    background-attachment: fixed; /* FIX: Ensure Parallax Effect Works */
 }
 
-/* Dark overlay for Parallax effect */
+/* FIX: Make overlay lighter for better readability */
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3); /* Changed from 0.5 to 0.3 */
+}
+
+/* FIX: Ensure Hero Section Text is Readable */
+.hero h1 {
+    font-family: 'Marcellus', serif;
+    font-size: 3rem;
+    z-index: 10;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-top: 10px;
+    z-index: 10;
 }
 
 /* Services Section */
@@ -68,11 +87,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-.service {
-    flex: 1;
-    max-width: 300px;
 }
 
 .service img {
