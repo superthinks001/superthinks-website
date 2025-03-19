@@ -328,19 +328,89 @@ nav {
 .form-content {
     max-width: 900px;
     background: rgba(255, 255, 255, 0.85); /* Reduced opacity */
-    padding: 40px; /* Reduced padding for better alignment */
+    padding: 80px; /* Ensures margin aligns with elements */
     margin-left: auto; /* Pushes box to the right */
     margin-right: 80px; /* Matches the left margin it previously had */
     height: 100vh; /* Ensures the white box stretches to full section */
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Centers content within the box */
-    align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
-/* Google Form Iframe */
-.form-content iframe {
-    width: 100%;
-    height: 800px; /* Adjusts height for better fit */
-    border: none; /* Removes border */
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
+/* Labels */
+form label {
+    font-size: 10px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    font-weight: normal;
+    text-transform: none; /* Removed Upper Case */
+}
+
+/* Input Fields */
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    background: transparent; /* Transparent background */
+}
+
+/* Textarea */
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Send Button */
+.send-button {
+    background: #3C2A4D;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+    width: fit-content; /* Ensures button width matches text */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Book a Call Button */
+.call-button {
+    background: #3C2A4D;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+/* Hover Effects */
+.send-button:hover,
+.call-button:hover {
+    background: #2B1C38;
+}
+
