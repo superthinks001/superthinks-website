@@ -323,3 +323,16 @@ nav {
     min-height: 100vh; /* Full viewport height */
     width: 100%;
 }
+
+/* Form Content Box */
+.form-content {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.85); /* Reduced opacity */
+    padding: 80px; /* Ensures margin aligns with logo’s left edge */
+    margin-left: 80px; /* Matches left margin of logo */
+    height: 100vh; /* Ensures the white box stretches to full section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content within the box */
+    text-align: left;
+}
