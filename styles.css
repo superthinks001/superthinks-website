@@ -421,13 +421,14 @@ form textarea {
     padding: 20px;
     font-size: 14px;
     font-family: 'HelveticaNeueLight', sans-serif;
-    font-weight: bold;
 }
 
 #success-message {
     color: #3C2A4D; /* Matching button color */
+    background: transparent;
 }
 
 #error-message {
     color: red;
+    background: transparent;
 }
