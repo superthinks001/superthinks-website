@@ -333,6 +333,6 @@ nav {
     display: flex;
     justify-content: flex-start; /* Align content from left */
     align-items: center;
-    padding-left: 80px; /* Match the margin from the left of Story section */
     padding-right: 80px; /* Adds uniformity */
+    width: 600px; /* Limits the size of the box */
 }
