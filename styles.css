@@ -178,46 +178,55 @@ nav {
 
 /* Story Section */
 .story {
-    height: 100vh;
-    background: url('./assets/story_background.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 80px; /* Match left margin with logo */
+    justify-content: flex-start; /* Aligns content to the left */
+    padding: 0; /* No padding to allow full-width */
+    background: url('./assets/story_background.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; /* Full viewport height */
 }
 
 /* Story Content Box */
 .story-content {
-    background: rgba(255, 255, 255, 0.85); /* Increased opacity by 5% */
-    padding: 50px;
-    max-width: 650px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.85); /* Reduced opacity */
+    padding: 80px; /* Ensures margin aligns with logo’s left edge */
+    margin-left: 80px; /* Matches left margin of logo */
+    height: 100vh; /* Ensures the white box stretches to full section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content within the box */
     text-align: left;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
+    border-radius: 0; /* Removed rounded corners */
 }
 
-/* Title */
+/* Section Title */
 .story h2 {
     font-size: 32px;
     font-family: 'Marcellus', serif;
+    color: black;
     margin-bottom: 20px;
 }
 
 /* Paragraph Styling */
 .story p {
     font-size: 16px;
-    line-height: 1.6;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
-/* Bold Text */
+/* Bold Headers */
 .bold-text {
-    font-family: 'HelveticaNeue_Bold', sans-serif;
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-weight: normal;
 }
 
 /* Read Our PoV Button */
 .story-button {
     display: inline-block;
-    background: #3E1D4D;
+    background: #3C2A4D; /* Dark purple */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
