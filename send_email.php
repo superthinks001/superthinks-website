@@ -1,39 +1,35 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $first_name = strip_tags(trim($_POST["first_name"]));
-    $last_name = strip_tags(trim($_POST["last_name"]));
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $message = trim($_POST["message"]);
+    // Capture form fields
+    $firstName = htmlspecialchars($_POST['first-name']);
+    $lastName = htmlspecialchars($_POST['last-name']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars($_POST['message']);
 
-    // Validate Input
-    if (empty($first_name) || empty($last_name) || empty($email) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        http_response_code(400);
-        echo "Please fill in all required fields correctly.";
-        exit;
-    }
+    // Your email where the form should be sent
+    $to = "superthinksai@gmail.com"; // Replace with the actual target email
 
-    // Email Content
-    $to = "superthinksai@gmail.com"; // 🔹 UPDATE Email ID here
-    $subject = "New Contact Form Submission from $first_name $last_name";
-    $email_body = "You have received a new message from your contact form.\n\n";
-    $email_body .= "Name: $first_name $last_name\n";
-    $email_body .= "Email: $email\n\n";
-    $email_body .= "Message:\n$message\n";
+    // Email Subject
+    $subject = "New Contact Form Submission from $firstName $lastName";
+
+    // Email Body
+    $body = "You have received a new message from your website contact form.\n\n".
+            "Name: $firstName $lastName\n".
+            "Email: $email\n\n".
+            "Message:\n$message";
 
     // Email Headers
-    $headers = "From: $first_name $last_name <$email>\r\n";
-    $headers .= "Reply-To: $email\r\n";
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
     // Send Email
-    if (mail($to, $subject, $email_body, $headers)) {
-        http_response_code(200);
-        echo "Your message has been sent successfully.";
+    if (mail($to, $subject, $body, $headers)) {
+        echo "success"; // AJAX can check this response
     } else {
-        http_response_code(500);
-        echo "Oops! Something went wrong, and we couldn't send your message.";
+        echo "error";
     }
 } else {
-    http_response_code(403);
-    echo "There was a problem with your submission. Please try again.";
+    echo "Invalid Request";
 }
 ?>
