@@ -1,3 +1,14 @@
+/* Import Fonts */
+@font-face {
+    font-family: 'Marcellus';
+    src: url('assets/fonts/Marcellus-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('assets/fonts/HelveticaNeue_Light.ttf') format('truetype');
+}
+
 /* Reset Defaults */
 * {
     margin: 0;
@@ -19,42 +30,29 @@ nav {
     background: transparent;
 }
 
-/* Logo Section (Increased Size & Added Text) */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between logo and text */
-}
-
+/* Logo */
 .logo img {
-    height: 60px; /* Increased logo size by 50% */
+    height: 40px;
 }
 
-.logo-text {
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-    font-family: 'Marcellus', serif;
-}
-
-/* Nav Links (Increased Center Alignment & Spacing) */
+/* Nav Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px; /* Increased spacing between buttons */
+    gap: 20px;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-/* Right Side (LinkedIn Icon + Button) */
+/* Right Side of Navbar */
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 25px; /* Increased space between LinkedIn & button */
+    gap: 15px;
 }
 
 /* LinkedIn Icon */
@@ -66,11 +64,10 @@ nav {
 /* Call-to-Action Button */
 .cta-button {
     border: 1px solid white;
-    padding: 10px 20px;
+    padding: 8px 15px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    font-size: 16px;
 }
 
 /* Hero Section */
@@ -97,5 +94,5 @@ nav {
 
 .hero p {
     font-size: 18px;
-    margin-top: 25px; /* Increased space between heading & paragraph */
+    margin-top: 15px;
 }
