@@ -160,8 +160,39 @@
                     <a href="#" class="call-button">Book a Call Now</a>
                 </div>
             </form>
+
+            <!-- Success Message (Hidden Initially) -->
+            <div id="success-message" style="display: none; text-align: center; padding: 20px; color: #3C2A4D;">
+                <h3>Thank you!</h3>
+                <p>Your message has been sent successfully. We will be in touch soon!</p>
+            </div>
         </div>
     </section>
 
+    <!-- JavaScript for Form Submission (Paste Before </body>) -->
+    <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents default form submission
+
+        let form = event.target;
+        let formData = new FormData(form);
+
+        fetch("https://script.google.com/macros/s/AKfycbw1oO9dpPM4owJNQNkcTjBNERc1UGqOzXSF_RnpQkKnD5f8kyMEhZKfRvJJ7oLFpYVS/exec", {
+            method: "POST",
+            body: formData
+        }).then(response => {
+            if (response.ok) {
+                form.style.display = "none"; // Hide the form
+                document.getElementById("success-message").style.display = "block"; // Show success message
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        }).catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong. Please try again.");
+        });
+    });
+    </script>
+    
 </body>
 </html>
