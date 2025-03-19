@@ -285,7 +285,7 @@ nav {
     position: absolute;
     bottom: 5px;
     right: 5px;
-    background-color: white;
+    background-color: transparent;
     padding: 5px;
     border-radius: 5px; /* Ensures LinkedIn icon is square */
 }
