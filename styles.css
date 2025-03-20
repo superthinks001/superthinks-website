@@ -476,14 +476,18 @@ form textarea {
     background-size: cover;
     padding: 60px 80px; /* Consistent padding */
     color: white;
+    position: relative; /* Ensures it does not interfere with nav */
+    z-index: 10; /* Keeps it below the navigation */
 }
 
+/* Footer Container */
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
     margin: auto;
+    position: relative; /* Ensures layout consistency */
 }
 
 /* Left Side - Logo & Navigation */
@@ -492,17 +496,25 @@ form textarea {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    position: relative; /* Keeps it within footer */
 }
 
+/* Footer Logo */
 .footer-logo {
     font-size: 28px;
     font-family: 'Marcellus', serif;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    position: relative; /* Ensures it stays inside footer */
 }
 
 .footer-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative; /* Keeps navigation inside footer */
 }
 
 .footer-nav ul li {
@@ -522,14 +534,17 @@ form textarea {
 /* Right Side - Contact Info */
 .footer-right {
     text-align: right;
+    position: relative; /* Ensures proper alignment */
 }
 
+/* Contact Email */
 .footer-email {
     color: white;
     text-decoration: underline;
     font-size: 14px;
 }
 
+/* Contact Phone */
 .footer-phone {
     font-size: 14px;
 }
@@ -539,4 +554,5 @@ form textarea {
     font-size: 12px;
     margin-top: 20px;
     opacity: 0.7;
+    position: relative; /* Keeps everything aligned properly */
 }
