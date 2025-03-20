@@ -469,3 +469,74 @@ form textarea {
     color: red;
     background: transparent;
 }
+
+/* Footer Section */
+.footer {
+    background: url('./assets/footer_background.png') no-repeat center center;
+    background-size: cover;
+    padding: 60px 80px; /* Consistent padding */
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Side - Logo & Navigation */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-family: 'Marcellus', serif;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin-bottom: 5px;
+}
+
+.footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side - Contact Info */
+.footer-right {
+    text-align: right;
+}
+
+.footer-email {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.footer-phone {
+    font-size: 14px;
+}
+
+/* Copyright */
+.footer-copyright {
+    font-size: 12px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
