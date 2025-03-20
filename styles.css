@@ -157,11 +157,11 @@ nav {
 }
 
 /* Service Titles */
-.service h3 {
+.services-container .service h3 {
     font-size: 24px;
     font-family: 'Marcellus', serif;
     margin-bottom: 10px; /* Creates equal spacing */
-    color: #3C2A4D; /* Added line to make the font color Dark purple */
+    color: #3C2A4D !important; /* Ensures Dark Purple applies */
 }
 
 /* Service Descriptions */
