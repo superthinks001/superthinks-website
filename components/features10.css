@@ -1,0 +1,144 @@
+.features10-layout300 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.features10-max-width {
+  gap: var(--dl-layout-space-threeunits);
+  align-items: center;
+}
+ 
+.features10-section-title {
+  align-items: center;
+}
+ 
+.features10-text11 {
+  text-align: center;
+}
+ 
+.features10-content {
+  align-self: stretch;
+  align-items: center;
+}
+ 
+.features10-feature1 {
+  align-items: flex-start;
+}
+ 
+.features10-feature1-title {
+  text-align: center;
+}
+ 
+.features10-feature2 {
+  align-items: flex-start;
+}
+ 
+.features10-feature3 {
+  align-items: flex-start;
+}
+ 
+.features10-actions {
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  align-items: flex-start;
+}
+ 
+.features10-fragment1 {
+  display: contents;
+}
+ 
+.features10-text12 {
+  display: inline-block;
+}
+ 
+.features10-fragment2 {
+  display: contents;
+}
+ 
+.features10-text13 {
+  display: inline-block;
+}
+ 
+.features10-fragment3 {
+  display: contents;
+}
+ 
+.features10-text14 {
+  display: inline-block;
+}
+ 
+.features10-fragment4 {
+  display: contents;
+}
+ 
+.features10-text15 {
+  display: inline-block;
+}
+ 
+.features10-fragment5 {
+  display: contents;
+}
+ 
+.features10-text16 {
+  display: inline-block;
+}
+ 
+.features10-fragment6 {
+  display: contents;
+}
+ 
+.features10-text17 {
+  display: inline-block;
+}
+ 
+.features10-fragment7 {
+  display: contents;
+}
+ 
+.features10-text18 {
+  display: inline-block;
+}
+ 
+.features10-fragment8 {
+  display: contents;
+}
+ 
+.features10-text19 {
+  display: inline-block;
+}
+ 
+@media(max-width: 991px) {
+  .features10-section-title {
+    width: 100%;
+  }
+}
+ 
+@media(max-width: 767px) {
+  .features10-section-title {
+    width: auto;
+  }
+  .features10-text10 {
+    text-align: center;
+  }
+  .features10-feature2 {
+    width: auto;
+  }
+  .features10-feature3 {
+    width: auto;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .features10-max-width {
+    gap: var(--dl-layout-space-oneandhalfunits);
+  }
+  .features10-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+}
