@@ -236,5 +236,61 @@
       defer=""
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+
+    <script>
+      // Wait until the page fully loads
+      document.addEventListener("DOMContentLoaded", function () {
+        // Select the form element by its class
+        const form = document.querySelector(".contact-form7-form");
+        
+        // Create a new paragraph element for the thank-you message
+        const thankYouMsg = document.createElement("p");
+        thankYouMsg.id = "thankYouMsg";
+        thankYouMsg.textContent = "Thank you, your message is sent successfully. Someone will be in touch soon!";
+        thankYouMsg.style.display = "none"; // hide it initially
+        form.appendChild(thankYouMsg);
+        
+        // When the user types in any input or textarea, hide the thank-you message
+        const inputs = form.querySelectorAll("input, textarea");
+        inputs.forEach(input => {
+          input.addEventListener("input", function () {
+            thankYouMsg.style.display = "none";
+          });
+        });
+        
+        // Handle form submission
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent page reload
+          
+          // Get the values from the form fields using their IDs
+          const first_name = document.getElementById("contact-form-7-first-name").value.trim();
+          const last_name  = document.getElementById("contact-form-7-last-name").value.trim();
+          const email      = document.getElementById("contact-form-7-email").value.trim();
+          const phone      = document.getElementById("contact-form-7-phone").value.trim();
+          const message    = document.getElementById("contact-form-7-message").value.trim();
+          
+          // Create an object with keys matching what the GAS script expects
+          const data = { first_name, last_name, email, phone, message };
+          
+          // Send the data to your GAS web app
+          fetch("https://script.google.com/macros/s/AKfycbwjeVhH05Fh5DZaSwAWxtbrZrzTe2JWfroGriYSzQg5Q4DDiqc6ANy7p6KHCluuwT4S/exec", {
+            method: "POST",
+            mode: "no-cors", // 'no-cors' mode for Google Apps Script
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+          })
+          .then(() => {
+            // On success: show the thank-you message and clear the form
+            thankYouMsg.style.display = "block";
+            form.reset();
+          })
+          .catch(error => {
+            console.error("Error:", error);
+          });
+        });
+      });
+    </script>
+  
+  
   </body>
 </html>
