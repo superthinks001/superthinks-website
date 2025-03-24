@@ -1690,10 +1690,17 @@
   font-family: "HelveticaNeue";
 }
  
-.contact-form7-text-input1 {
+.contact-form7-text-input,
+.contact-form7-textarea {
   background-color: rgba(255, 255, 255, 0.7);
+  text-align: left; /* Aligns the text to the left */
 }
  
+.contact-form7-text-input::placeholder,
+.contact-form7-textarea::placeholder {
+  text-align: left; /* Aligns the placeholder text to the left */
+}
+
 .contact-form7-input2 {
   gap: var(--dl-layout-space-halfunit);
   width: 50%;
@@ -1708,10 +1715,6 @@
   font-family: "HelveticaNeue";
 }
  
-.contact-form7-text-input2 {
-  background-color: rgba(255, 255, 255, 0.7);
-}
- 
 .contact-form7-container2 {
   gap: var(--dl-layout-space-unit);
   flex: 0 0 auto;
@@ -1723,7 +1726,7 @@
  
 .contact-form7-input3 {
   gap: var(--dl-layout-space-halfunit);
-  width: 50%;
+  width: 100%;
   display: flex;
   align-self: stretch;
   align-items: flex-start;
@@ -1733,10 +1736,6 @@
 .contact-form7-text15 {
   font-size: 14px;
   font-family: "HelveticaNeue";
-}
- 
-.contact-form7-text-input3 {
-  background-color: rgba(255, 255, 255, 0.7);
 }
  
 .contact-form7-input4 {
@@ -1752,11 +1751,7 @@
   font-size: 14px;
   font-family: "HelveticaNeue";
 }
- 
-.contact-form7-text-input4 {
-  background-color: rgba(255, 255, 255, 0.7);
-}
- 
+
 .contact-form7-container3 {
   flex: 0 0 auto;
   width: 100%;
@@ -1806,6 +1801,7 @@
   margin-top: 20px; /* Adds spacing between the form and the messages */
   width: 100%; /* Ensures the message spans the form's width */
   text-align: center;
+  font-family: "HelveticaNeue-Light"; /* Set font to HelveticaNeue-Light */
 }
 
 .home-fragment47 {
@@ -2603,11 +2599,14 @@
 }
  
 .home-navbar-interactive {
-  width: 100%;
+  top: 0; /* Aligns the header to the top of the page */
+  left: 0;
+  width: 100%; /* Ensures the header spans the full width */
+  z-index: 1000; /* Places the header on a higher layer */
   height: 75px;
   display: flex;
   position: fixed;
-  max-width: idth;
+  max-width: 100%; 
   align-items: center;
   padding-top: var(--dl-layout-space-twounits);
   border-width: 0px;
