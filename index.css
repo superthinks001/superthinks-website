@@ -1793,7 +1793,21 @@
   font-size: 14px;
   font-family: "HelveticaNeue-Medium";
 }
- 
+
+.contact-form7-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#success-message,
+#error-message {
+  margin-top: 20px; /* Adds spacing between the form and the messages */
+  width: 100%; /* Ensures the message spans the form's width */
+  text-align: center;
+}
+
 .home-fragment47 {
   display: contents;
 }
