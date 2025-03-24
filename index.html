@@ -704,20 +704,20 @@
             </div>
 
             <div id="form-container" class="contact-form7-form-container">
-              <form id="contactForm" class="contact-form7-form thq-flex-column">
+              <form id="contactForm" class="contact-form7-form thq-flex-column" method="POST">
                 <div class="contact-form7-container1">
                   <div class="contact-form7-input1">
-                    <label for="first-name" class="contact-form7-text13 thq-body-small">
+                    <label for="firstName" class="contact-form7-text13 thq-body-small">
                       First name
                     </label>
-                    <input type="text" id="first-name" required="true" placeholder="First Name"
+                    <input type="text" id="first-name" name="first_name" required placeholder="First Name"
                       class="contact-form7-text-input1 thq-input" />
                   </div>
                   <div class="contact-form7-input2">
-                    <label for="last-name" class="contact-form7-text14 thq-body-small">
+                    <label for="lastName" class="contact-form7-text14 thq-body-small">
                       Last name
                     </label>
-                    <input type="text" id="last-name" placeholder="Last Name"
+                    <input type="text" id="last-name" name="last_name" required placeholder="Last Name"
                       class="contact-form7-text-input2 thq-input" />
                   </div>
                 </div>
@@ -726,14 +726,15 @@
                     <label for="email" class="contact-form7-text15 thq-body-small">
                       Email
                     </label>
-                    <input type="email" id="email" required="true" placeholder="Email"
+                    <input type="email" id="email" name="email" required="true" placeholder="Email" autocomplete="email"
                       class="contact-form7-text-input3 thq-input" />
                   </div>
                   <div class="contact-form7-input4">
                     <label for="phone" class="contact-form7-text16 thq-body-small">
                       Phone Number
                     </label>
-                    <input type="tel" id="phone" placeholder="Phone Number" class="contact-form7-text-input4 thq-input" />
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel"
+                      class="contact-form7-text-input4 thq-input" />
                   </div>
                 </div>
                 <div class="contact-form7-container3">
@@ -741,7 +742,7 @@
                     <label for="message" class="contact-form7-text17 thq-body-small">
                       Message
                     </label>
-                    <textarea id="message" rows="3" placeholder="Enter your message"
+                    <textarea id="message" name="message" rows="3" placeholder="Enter your message"
                       class="contact-form7-textarea thq-input"></textarea>
                   </div>
                 </div>

@@ -3,8 +3,17 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
   let form = event.target;
   let formData = new FormData(form);
+  //let deploymentId = "AKfycbxY_cyOYZQi-19eK5Y08kkiMbKVKHpraI8xLTpul_PdZcWruF3dCcraK0L-gtfV_yOHfQ"; // first version
+  let deploymentId = "AKfycbxqJKNMov4eyQ-Ee_QnV_leFhggAfHold8JIkW7gqMW83zsjwz5fFbFGZRuZf0af6uR8g";
+  let API = "https://script.google.com/macros/s/" + deploymentId + "/exec";
 
-  fetch("https://script.google.com/macros/s/AKfycbxY_cyOYZQi-19eK5Y08kkiMbKVKHpraI8xLTpul_PdZcWruF3dCcraK0L-gtfV_yOHfQ/exec", {
+  //console.log("Form data:", formData);
+  console.log("URL: " + API);
+  formData.forEach((value, key) => {
+    console.log(`${key}: ${value}`);
+  });
+
+  fetch(API, {
       method: "POST",
       body: formData
   })
