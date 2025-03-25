@@ -1,34 +1,59 @@
 document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevents default form submission
+  event.preventDefault(); // Prevent default form behavior
 
   let form = event.target;
   let formData = new FormData(form);
-  //let deploymentId = "AKfycbxY_cyOYZQi-19eK5Y08kkiMbKVKHpraI8xLTpul_PdZcWruF3dCcraK0L-gtfV_yOHfQ"; // first version
+
+  // Extract field values
+  const firstName = form.first_name.value;
+  const lastName = form.last_name.value;
+  const email = form.email.value;
+  const message = form.message.value;
+
+  // 1. Send to Google Apps Script
   let deploymentId = "AKfycbxqJKNMov4eyQ-Ee_QnV_leFhggAfHold8JIkW7gqMW83zsjwz5fFbFGZRuZf0af6uR8g";
   let API = "https://script.google.com/macros/s/" + deploymentId + "/exec";
 
-  //console.log("Form data:", formData);
-  console.log("URL: " + API);
-  formData.forEach((value, key) => {
-    console.log(`${key}: ${value}`);
-  });
-
   fetch(API, {
-      method: "POST",
-      body: formData
+    method: "POST",
+    body: formData
   })
-  .then(response => response.json()) // Expect JSON response
+  .then(response => response.json())
   .then(data => {
-      if (data.status === "success") {
-          form.reset(); // Clear form fields
-          form.style.display = "none"; // Hide the form
-          document.getElementById("success-message").style.display = "block"; // Show success message
-      } else {
-          document.getElementById("error-message").style.display = "block"; // Show error message
-      }
+    if (data.status === "success") {
+      console.log("✅ Google Sheets updated");
+    } else {
+      console.error("❌ Google Sheets error:", data);
+    }
   })
   .catch(error => {
-      console.error("Error:", error);
-      document.getElementById("error-message").style.display = "block"; // Show error message
+    console.error("❌ Google Sheets fetch failed:", error);
   });
-})
+
+  // 2. Send email via FormSubmit
+  const composedBody = 
+    "You have received a new inquiry from:\n\n" +
+    "Name: " + firstName + " " + lastName + "\n" +
+    "Email: " + email + "\n\n" +
+    "Message:\n" + message;
+
+  const formSubmitData = new FormData();
+  formSubmitData.append("first_name", firstName);
+  formSubmitData.append("last_name", lastName);
+  formSubmitData.append("email", email);
+  formSubmitData.append("message", message);
+  formSubmitData.append("_subject", "New Inquiry Received");
+  formSubmitData.append("_body", composedBody);
+  formSubmitData.append("_captcha", "false");
+  formSubmitData.append("_template", "box");
+
+  fetch("https://formsubmit.co/superthinksai@gmail.com", {
+    method: "POST",
+    body: formSubmitData
+  });
+
+  // ✅ 3. Final UI feedback
+  form.reset();
+  form.style.display = "none";
+  document.getElementById("success-message").style.display = "block";
+});
