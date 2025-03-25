@@ -21,13 +21,13 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   .then(response => response.json())
   .then(data => {
     if (data.status === "success") {
-      console.log("✅ Google Sheets updated");
+      console.log("Google Sheets updated");
     } else {
-      console.error("❌ Google Sheets error:", data);
+      console.error("Google Sheets error:", data);
     }
   })
   .catch(error => {
-    console.error("❌ Google Sheets fetch failed:", error);
+    console.error("Google Sheets fetch failed:", error);
   });
 
   // 2. Send email via FormSubmit
@@ -52,7 +52,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     body: formSubmitData
   });
 
-  // ✅ 3. Final UI feedback
+  // 3. Final UI feedback
   form.reset();
   form.style.display = "none";
   document.getElementById("success-message").style.display = "block";
