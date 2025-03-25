@@ -722,14 +722,16 @@
                       class="contact-form7-text-input thq-input" />
                   </div>
                 </div>
+              
                 <div class="contact-form7-container2">
                   <div class="contact-form7-input3">
                     <label for="email" class="contact-form7-text15 thq-body-small">
                       Email
                     </label>
-                    <input type="email" id="email" name="email" required="true" placeholder="Email" autocomplete="email"
+                    <input type="email" id="email" name="email" required placeholder="Email" autocomplete="email"
                       class="contact-form7-text-input thq-input" />
                   </div>
+                  <!-- Optional phone field, can be re-enabled -->
                   <!-- 
                   <div class="contact-form7-input4">
                     <label for="phone" class="contact-form7-text16 thq-body-small">
@@ -737,9 +739,10 @@
                     </label>
                     <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel"
                       class="contact-form7-text-input thq-input" />
-                  </div> 
+                  </div>
                   -->
                 </div>
+              
                 <div class="contact-form7-container3">
                   <div class="contact-form7-input5">
                     <label for="message" class="contact-form7-text17 thq-body-small">
@@ -749,10 +752,14 @@
                       class="contact-form7-textarea thq-input"></textarea>
                   </div>
                 </div>
+              
+                <!-- ✅ FormSubmit hidden fields -->
+                <input type="hidden" name="_subject" value="New Inquiry Received" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="box" />
+              
                 <button type="submit" id="submitButton" class="contact-form7-button thq-button-filled">
-                  <span class="contact-form7-action1 thq-body-small">
-                    Submit
-                  </span>
+                  <span class="contact-form7-action1 thq-body-small">Submit</span>
                 </button>
               </form>
 
