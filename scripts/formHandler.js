@@ -24,10 +24,12 @@ document.getElementById("contactForm").addEventListener("submit", function(event
       console.log("Google Sheets updated");
     } else {
       console.error("Google Sheets error:", data);
+      document.getElementById("error-message").style.display = "block";
     }
   })
   .catch(error => {
     console.error("Google Sheets fetch failed:", error);
+    document.getElementById("error-message").style.display = "block";
   });
 
   // 2. Send email via FormSubmit
@@ -50,6 +52,18 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   fetch("https://formsubmit.co/superthinksai@gmail.com", {
     method: "POST",
     body: formSubmitData
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log("Email sent successfully");
+    } else {
+      console.error("FormSubmit error:", response);
+      document.getElementById("error-message").style.display = "block";
+    }
+  })
+  .catch(error => {
+    console.error("FormSubmit fetch failed:", error);
+    document.getElementById("error-message").style.display = "block";
   });
 
   // 3. Final UI feedback
