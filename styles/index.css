@@ -2674,6 +2674,12 @@
   text-decoration: none;
 }
  
+.home-link61 {
+  color: #ffffff;
+  font-family: "HelveticaNeue-Light";
+  text-decoration: none;
+}
+ 
 .home-icon-group1 {
   gap: var(--dl-layout-space-twounits);
   display: flex;
