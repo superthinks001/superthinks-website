@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(mv:*)",
+      "Bash(git log:*)",
+      "Bash(git pull:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git rebase:*)",
+      "Bash(git push)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

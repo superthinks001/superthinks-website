@@ -49,7 +49,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   formSubmitData.append("_captcha", "false");
   formSubmitData.append("_template", "box");
 
-  fetch("https://formsubmit.co/superthinksai@gmail.com", {
+  fetch("https://formsubmit.co/contact@superthinks.ai", {
     method: "POST",
     body: formSubmitData
   })
